@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SingUp</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <form method="POST" action="/signUp">
+      <p id="userName" class="errorMsg">username already exits</p>
+      <input
+        type="text"
+        name="name"
+        autofocus
+        autocomplete="off"
+        placeholder="Name"
+        onblur="isUserExists()"
+      />
+      <input
+        type="password"
+        name="password"
+        autocomplete="off"
+        placeholder="password"
+        required
+      />
+      <button type="submit">REGISTER</button><br />
+  </form>
+  <a href="/index.html">login</a>
+</html>
